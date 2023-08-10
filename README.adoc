@@ -1,0 +1,7 @@
+= docs-common-content
+
+The content in this repo is shared, or can be shared, between multiple antora-based documentation repos, such as:
+
+* https://github.com/starknet-io/starknet-docs
+* https://github.com/starknet-edu/starknetbook
+

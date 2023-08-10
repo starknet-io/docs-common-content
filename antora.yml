@@ -1,0 +1,10 @@
+name: docs-common-content
+version: ~
+title: Common Starknet content
+#start_page: inline-text-formatting.adoc
+asciidoc:
+  attributes:
+    source-language: asciidoc@
+    table-caption: true
+nav:
+  - modules/ROOT/nav.adoc
