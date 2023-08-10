@@ -1,8 +1,6 @@
 [id="glossary"]
 = Glossary
 
-This document provides definitions for the main Starknet concepts and terms, along with their relationship to one another. Familiarity with the Starknet and Cairo is assumed.
-
 [#toc-application-developers]
 == application developers
 
