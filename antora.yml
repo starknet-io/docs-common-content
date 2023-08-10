@@ -1,5 +1,5 @@
 name: docs-common-content
-version: ~
+version: 1.0.0
 title: Common Starknet content
 #start_page: inline-text-formatting.adoc
 asciidoc:
