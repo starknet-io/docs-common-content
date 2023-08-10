@@ -1,7 +1,79 @@
 = docs-common-content
 
+:experimental:
+
 The content in this repo is shared, or can be shared, between multiple antora-based documentation repos, such as:
 
 * https://github.com/starknet-io/starknet-docs
 * https://github.com/starknet-edu/starknetbook
 
+== Glossary for this repo
+
+[horizontal]
+child repo:: This repo. It is included in a parent repo
+parent repo:: The repo for the Antora-based site that includes content from this repo.
+child file:: A file in this repo that you want to include in a file in the parent repo.
+parent file:: The file in the parent repo that includes a child file.
+
+You can only use child files by using the AsciiDoc `include` directive to include a child file in a parent AsciiDoc file in the parent repo. The child file must be in the `partials` family directory.
+
+If you directly reference a file in the `pages` family directory in a `nav.adoc` file, which defines the left navigation pane, clicking on the file in the pane leads Antora to go to the nav.adoc file of the module that contains the actual AsciiDoc file in the child repo. Because that module by its nature is not synchronized with a parent repo, Antora's context switches to show the nav.adoc for the child module which means that the left nav pane is empty.
+
+It's much simpler to just include a file from the child repo with an `include` directive in a file in the parent repo.
+
+.Example
+
+* The parent repo is `https://github.com/starknet-io/starknet-docs`. (Published output: https://docs.starknet.io)
+* The child repo is the repo that you are now viewing, at `https://github.com/starknet-io/docs-common-content`.
+
+`/modules/ROOT/partials/partial_glossary.adoc` is a Glossary that I want to include in the parent repo as a standalone page.
+
+To bring the child file into the parent site:
+
+. Create a parent file in the parent site named `glossary.adoc`. For example, I created this file as `https://github.com/starknet-io/starknet-docs/dev/components/Starknet/modules/ROOT/pages/glossary.adoc`. Here's the entire contents of `glossary.adoc`:
++
+[source,adoc]
+----
+\include::1.0.0@docs-common-content:ROOT:partial$partial_glossary.adoc[]
+----
+. Include the child repo in the playbook under the `sources` key. For example:
++
+[source,yaml]
+----
+  sources:
+    - url: . <1>
+      branches:
+        - 'HEAD'
+      edit_url: 'https://github.com/starknet-io/starknet-docs/edit/dev/{path}'
+      start_paths:
+        - components/Starknet
+    - url: https://github.com/starknet-io/docs-common-content.git <2>
+      branches: 'HEAD'
+      edit_url: 'https://github.com/starknet-io/docs-common-content/edit/main/{path}'
+----
+<1> This section defines the main repo for the parent.
+<2> This section is the child repo.
+. Add the parent file to `nav.adoc` for the module in which you want to include it. You might have to experiment to place it as desired within the left nav pane.
+
+If you make any changes to a child file, you need to manually regenerate the parent document.
+
+[IMPORTANT]
+====
+The btn:[Edit this page] button in the parent document does not allow you to edit the _child_ file directly, only files in the parent repo.
+
+When a reader clicks btn:[Edit this page], the parent file opens. In order to enable the reader to make a direct contribution to the child file, you must add a comment with the URL that actually opens the child file in the Github editor.
+
+For example:
+
+.The parent glossary.adoc file
+[source,adoc]
+----
+\include::1.0.0@docs-common-content:ROOT:partial$partial_glossary.adoc[]
+
+// The source for the included file is in a separate repository.
+//
+// To edit the source page directly, go to:
+//
+// `https://github.com/starknet-io/docs-common-content/edit/main/modules/ROOT/partials/partial_glossary.adoc`
+----
+====
