@@ -2,18 +2,23 @@
 
 :experimental:
 
-The content in this repo is shared, or can be shared, between multiple antora-based documentation repos, such as:
+The content in this repo is shared, or can be shared, between multiple Antora-based documentation repos, such as:
 
 * https://github.com/starknet-io/starknet-docs
 * https://github.com/starknet-edu/starknetbook
 
+== Prerequisites
+
+* Knowledge of Antora and AsciiDoc
+* Knowledge of the contribution guidelines for https://docs.starknet.io. See link:https://github.com/starknet-io/starknet-docs[The Starknet docs Contribution guidelines] in the Starknet docs repo.
+
 == Glossary for this repo
 
 [horizontal]
-child repo:: This repo. It is included in a parent repo
+child repo:: This repo. Include this repo in the playbook.yml file of a parent repo.
 parent repo:: The repo for the Antora-based site that includes content from this repo.
-child file:: A file in this repo that you want to include in a file in the parent repo.
-parent file:: The file in the parent repo that includes a child file.
+child file:: A file in this repo that you want to include in the parent repo.
+parent file:: The file in the parent repo that has an `include::` directive to include a child file.
 
 You can only use child files by using the AsciiDoc `include` directive to include a child file in a parent AsciiDoc file in the parent repo. The child file must be in the `partials` family directory.
 
