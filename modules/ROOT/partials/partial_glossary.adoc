@@ -2,12 +2,12 @@
 = Glossary
 
 [#toc-application-developers]
-== application developer
+== Application developer
 
 Someone that develops a Starknet application. They write and deploy contracts on Starknet and Ethereum.
 
 [#toc-blocks-previously-known-as-batches]
-== blocks (previously known as batches)
+== Blocks (previously known as batches)
 
 Ordered sets of Starknet transactions that are run using the Starknet OS, resulting in one aggregated state change that is then committed to the Starknet L1 core contract. A block has:
 
@@ -15,12 +15,12 @@ Ordered sets of Starknet transactions that are run using the Starknet OS, result
 * a block number – an ordinal number representing the location of the block in the sequence of accepted blocks in Starknet. Note, a block’s number may change over time. Also, a given number may refer to different blocks at different points in time, e.g., in the event of L1 chain re-orders.
 
 [#toc-full-state-node]
-== full state node
+== Full state node
 
 A node in the Starknet network that is used only for querying the current Starknet state. It can independently (i.e., without/o querying additional nodes) answer queries about the current state of the Starknet network, including the L1 state. It does not batch transactions or prove batches.
 
 [#toc-prover]
-== prover
+== Prover
 
 A separate process (either an online service or internal to the node) that receives the output of Cairo programs and generates STARK proofs to be verified. The Prover submits the STARK proof to the verifier that registers the fact on L1.
 
