@@ -10,6 +10,7 @@ https://github.com/xJonathanLEI/starkli[Starkli]:: A command-line interface that
 
 https://github.com/software-mansion/scarb[Scarb]:: A package manager for Cairo. Among other features, it enables you to compile Cairo code to Sierra, the intermediate language between high-level Cairo and the low-level Cairo Assembly (CASM).
 
+[#installing_starkli]
 == Installing Starkli
 
 The steps for installing Starkli and upgrading Starkli are identical.
@@ -45,6 +46,7 @@ starkli --version
 +
 Starkli prints the current version.
 
+[#setting_environment_variables_for_starkli]
 == Setting environment variables for Starkli
 
 For the majority of flags available on Starkli you can set environment variables to make the commands shorter and easier to manage.
@@ -65,6 +67,7 @@ export STARKNET_ACCOUNT=~/.starkli-wallets/deployer/account.json
 export STARKNET_KEYSTORE=~/.starkli-wallets/deployer/keystore.json
 ----
 
+[#installing_scarb]
 == Installing Scarb
 
 Scarb is compatible with macOS, Linux, and Windows operating systems.
