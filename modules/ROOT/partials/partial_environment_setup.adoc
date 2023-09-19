@@ -5,7 +5,7 @@ In order to interact with Starknet and compile Cairo code, you need to install s
 
 The following tools are recommended to begin developing on Starknet:
 
-[horizontal]
+[horizontal,labelwidth="25"]
 https://github.com/xJonathanLEI/starkli[Starkli]:: A command-line interface that allows you to interact with Starknet.
 
 https://github.com/software-mansion/scarb[Scarb]:: A package manager for Cairo. Among other features, it enables you to compile Cairo code to Sierra, the intermediate language between high-level Cairo and the low-level Cairo Assembly (CASM).
@@ -55,9 +55,9 @@ Setting environment variables for Starkli significantly simplifies command execu
 
 The two primary environment variables that are vital for effective usage of Starkli's CLI are:
 
-[horizontal]
-STARKNET_ACCOUNT:: The location of the keystore file for the xref:set_up_an_account.adoc#creating_a_signer[Signer].
-STARKNET_KEYSTORE:: The location of the xref:set_up_an_account.adoc#creating_an_account_descriptor[Account Descriptor] file.
+[horizontal,labelwidth="25"]
+`STARKNET_ACCOUNT`:: The location of the keystore file for the xref:set_up_an_account.adoc#creating_a_signer[Signer].
+`STARKNET_KEYSTORE`:: The location of the xref:set_up_an_account.adoc#creating_an_account_descriptor[Account Descriptor] file.
 
 Set these environment variables as follows:
 
