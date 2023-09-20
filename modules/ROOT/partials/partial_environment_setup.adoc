@@ -5,7 +5,7 @@ In order to interact with Starknet and compile Cairo code, you need to install s
 
 The following tools are recommended to begin developing on Starknet:
 
-[horizontal,labelwidth="25"]
+[horizontal,labelwidth="20"]
 https://github.com/xJonathanLEI/starkli[Starkli]:: A command-line interface that allows you to interact with Starknet.
 
 https://github.com/software-mansion/scarb[Scarb]:: A package manager for Cairo. Among other features, it enables you to compile Cairo code to Sierra, the intermediate language between high-level Cairo and the low-level Cairo Assembly (CASM).
