@@ -42,12 +42,9 @@ Starkli also includes the following features:
 [discrete]
 === Where do you get it?
 
-For information on getting started, including installation instructions, see https://medium.com/starknet-edu/starkli-the-new-starknet-cli-86ea914a2933[Starkli: The New Starknet CLI].
-
-See also:
-
-* https://github.com/xJonathanLEI/starkli/[The Starkli Github repository]
-* the https://book.starkli.rs/[Starkli book]
+* link:https://medium.com/starknet-edu/starkli-the-new-starknet-cli-86ea914a2933[Starkli: The New Starknet CLI], on Medium, includes information on getting started, including installation instructions.
+* link:https://github.com/xJonathanLEI/starkli/[The Starkli Github repository]
+* link:https://book.starkli.rs/[The Starkli Book]
 
 == SDKs: A window into Starknet
 
@@ -67,10 +64,10 @@ There are several SDKs for various languages, so you can choose the SDK accordin
 
 |Starknet.js a|
 JavaScript, TypeScript
-|Dapps, Wallets |Shardlabs | https://github.com/0xs34n/starknet.js[starknet.js Github repository]
-|Starknet.py |Python |Useful scripts |Software Mansion (SWM) | https://github.com/software-mansion/starknet.py[starknet.py Github repository]
-|Starknet-rs |Rust |Starkli, Foundry |Jonathan Lei | https://github.com/xJonathanLEI/starknet-rs[starknet-rs Github repository]
-|Starknet-go |Go |Chainlink |Nethermind | https://github.com/NethermindEth/starknet.go[starknet-go Github repository]
+|Dapps, Wallets |Shardlabs | link:https://github.com/0xs34n/starknet.js[starknet.js Github repository]
+|Starknet.py |Python |Useful scripts |Software Mansion (SWM) | link:https://github.com/software-mansion/starknet.py[starknet.py Github repository]
+|Starknet-rs |Rust |Starkli, Foundry |Jonathan Lei | link:https://github.com/xJonathanLEI/starknet-rs[starknet-rs Github repository]
+|Starknet-go |Go |Chainlink |Nethermind | link:https://github.com/NethermindEth/starknet.go[starknet-go Github repository]
 |===
 
 == starknet-devnet, starknet-devnet-rs
@@ -110,8 +107,8 @@ starknet-devnet-rs is the devnet to pay attention to, as it is developed in coop
 [discrete]
 === Where do you get it?
 
-* https://github.com/Shard-Labs/starknet-devnet[The starknet-devnet Gitbhub repository]
-* https://github.com/0xSpaceShard/starknet-devnet-rs[The starknet-devnet-rs Github repository]
+* link:https://github.com/Shard-Labs/starknet-devnet[The starknet-devnet Gitbhub repository]
+* link:https://github.com/0xSpaceShard/starknet-devnet-rs[The starknet-devnet-rs Github repository]
 
 == Katana
 
@@ -126,7 +123,7 @@ Katana, developed by the Dojo team, is an extremely fast devnet designed to supp
 [discrete]
 === Where do you get it?
 
-For information on installing and using Katana, see https://book.dojoengine.org/toolchain/katana/overview.html[Katana] in the Dojo documentation.
+link:https://book.dojoengine.org/toolchain/katana/overview.html[Katana] in the Dojo documentation includes information on installing and using Katana.
 
 == Scarb: The Cairo package manager
 
@@ -160,7 +157,7 @@ Developers are currently working on improving the way Scarb handles the manageme
 [discrete]
 === Where do you get it?
 
-https://docs.swmansion.com/scarb/[The Scarb site]
+link:https://docs.swmansion.com/scarb/[The Scarb site]
 
 == Starknet Foundry
 
@@ -190,7 +187,7 @@ Starknet Foundry includes the following features:
 
 Many new features are coming soon, including fuzz testing, L1<>L2 messaging, and code coverage.
 
-The Starknet Foundry Github repo has a https://github.com/foundry-rs/starknet-foundry/#roadmap[roadmap] showing new and in-development features, although it’s not clear if the checkmarks indicate features that are already implemented, or in active development.
+The Starknet Foundry Github repo has a link:https://github.com/foundry-rs/starknet-foundry/#roadmap[roadmap] showing new and in-development features, although it’s not clear if the checkmarks indicate features that are already implemented, or in active development.
 
 [discrete]
 === Where do you get it?
@@ -227,13 +224,11 @@ Upcoming features include:
 [discrete]
 === Where do you get it?
 
-Get Hardhat at https://hardhat.org/[the Hardhat site].
+* Get Hardhat at link:https://hardhat.org/[the Hardhat site].
 
-Get the Starknet plugin at the https://github.com/0xSpaceShard/starknet-hardhat-plugin[Starknet Hardhat plugin Github repo].
+* Get the Starknet plugin at the link:https://github.com/0xSpaceShard/starknet-hardhat-plugin[Starknet Hardhat plugin Github repo].
 
-See examples of how to use the plugin at the https://github.com/0xSpaceShard/starknet-hardhat-example/tree/master[Starknet Hardhat example scripts Github repo].
-
-**
+* See examples of how to use the plugin at the link:https://github.com/0xSpaceShard/starknet-hardhat-example/tree/master[Starknet Hardhat example scripts Github repo].
 
 == The Starknet Remix plugin
 
@@ -258,9 +253,9 @@ Remix and the Starknet Remix plugin include the following features:
 * You can call functions of contracts that you have already deployed, to facilitate testing and interaction.
 * Seamless integration with Scarb.
 * Integration with block explorers such as Voyager, so you can easily check the execution of your transactions, in real time.
-* The Starknet Remix Plugin is integrated with https://starknet-by-example.voyager.online/[Starknet By Example], a rich repository of practical learning content.
+* The Starknet Remix Plugin is integrated with link:https://starknet-by-example.voyager.online/[Starknet By Example], a rich repository of practical learning content.
 
-For more information on the Starknet Remix plugin, see https://medium.com/nethermind-eth/unlocking-onboarding-to-starknet-an-overview-of-the-starknet-remix-plugin-6b0658e73521[Unlocking Onboarding to Starknet: An Overview of the Starknet Remix Plugin].
+For more information on the Starknet Remix plugin, see link:https://medium.com/nethermind-eth/unlocking-onboarding-to-starknet-an-overview-of-the-starknet-remix-plugin-6b0658e73521[Unlocking Onboarding to Starknet: An Overview of the Starknet Remix Plugin].
 
 [discrete]
 === What’s next?
@@ -271,9 +266,9 @@ For more information on the Starknet Remix plugin, see https://medium.com/nether
 [discrete]
 === Where do you get it?
 
-To get started with Remix, see the https://remix-project.org[Remix Project] site.
+Get started with Remix at the link:https://remix-project.org[Remix Project site].
 
-To get started with the Starknet Remix plugin, see https://github.com/groksmith/starkware-remix-plugin[the Starknet Remix plugin’s Github repo].
+Get started with the Starknet Remix plugin at link:https://github.com/groksmith/starkware-remix-plugin[the Starknet Remix plugin’s Github repo].
 
 == The Visual Studio Code Cairo extension
 
@@ -304,8 +299,8 @@ Features include:
 Cairo syntax highlighting will improve as more features are added to the Cairo language server
 
 [discrete]
-=== Where do I get it?
+=== Where do you get it?
 
-https://marketplace.visualstudio.com/items?itemName=starkware.cairo1[Cairo 1.0 - Visual Studio Marketplace]
+link:https://marketplace.visualstudio.com/items?itemName=starkware.cairo1[Cairo 1.0 - Visual Studio Marketplace]
 
 
