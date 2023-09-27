@@ -10,20 +10,20 @@ See the table xref:#tools_per_stage_of_development[] below to understand where e
 [#tools_per_stage_of_development]
 .Tools for each stage of development
 |===
-| *Coding in Cairo* | _VsCode_ + _Cairo plugin_ +
+| *Coding in Cairo* | xref:#vs_code_cairo_extension[_VsCode_ + _Cairo plugin_] +
 or +
-_Remix_ + _Cairo plugin_
-| *Building* | _Scarb_
-| *Testing and debugging* | _Foundry (Forge)_ +
+xref:#starknet_remix_plugin[_Remix_ + _Cairo plugin_]
+| *Building* | xref:#scarb[_Scarb_]
+| *Testing and debugging* | xref:#starknet_foundry[_Foundry (Forge)_] +
 or +
-_Hardhat_ + _Starknet plugin (JavaScript only)_
+xref:#hardhat[_Hardhat_ + _Starknet plugin (JavaScript only)_]
 | *Running on a devnet* |_Scarb_ for compiling and packaging +
-_starknet-devnet_/_starknet-devnet-rs (local node)_ +
+xref:#starknet-devnet[_starknet-devnet_/_starknet-devnet-rs_ (local node)] +
 or +
-_Katana (local node)_
-| *Contract development* | _Foundry (Cast)_
+xref:#katana[_Katana_ (local node)]
+| *Contract development* | xref:#starknet_foundry[_Foundry (Cast)_]
 or
-_Starkli_
+xref:#starkli[_Starkli_]
 | *Package delivery* +
 (Optional) | _Scarb_
 |===
@@ -33,6 +33,7 @@ _Starkli_
 The tools listed here do not represent all that are available.
 ====
 
+[#starkli]
 == Starkli
 
 [discrete]
@@ -72,6 +73,7 @@ Starkli also includes the following features:
 * link:https://github.com/xJonathanLEI/starkli/[The Starkli Github repository]
 * link:https://book.starkli.rs/[The Starkli Book]
 
+[#sdks]
 == SDKs: A window into Starknet
 
 A Software Development Kit (SDK) is a library that abstracts the complexities of Starknet when building transactions and interacting with the blockchain, including the following:
@@ -96,6 +98,7 @@ JavaScript, TypeScript
 |Starknet-go |Go |Chainlink |Nethermind | link:https://github.com/NethermindEth/starknet.go[starknet-go Github repository]
 |===
 
+[#starknet-devnet]
 == starknet-devnet, starknet-devnet-rs
 
 [discrete]
@@ -136,6 +139,8 @@ starknet-devnet-rs is the devnet to pay attention to, as it is developed in coop
 * link:https://github.com/Shard-Labs/starknet-devnet[The starknet-devnet Gitbhub repository]
 * link:https://github.com/0xSpaceShard/starknet-devnet-rs[The starknet-devnet-rs Github repository]
 
+
+[#katana]
 == Katana
 
 [discrete]
@@ -151,6 +156,7 @@ Katana, developed by the Dojo team, is an extremely fast devnet designed to supp
 
 link:https://book.dojoengine.org/toolchain/katana/overview.html[Katana] in the Dojo documentation includes information on installing and using Katana.
 
+[#scarb]
 == Scarb: The Cairo package manager
 
 [discrete]
@@ -185,6 +191,7 @@ Developers are currently working on improving the way Scarb handles the manageme
 
 link:https://docs.swmansion.com/scarb/[The Scarb site]
 
+[#starknet_foundry]
 == Starknet Foundry
 
 [discrete]
@@ -220,6 +227,7 @@ The Starknet Foundry Github repo has a link:https://github.com/foundry-rs/starkn
 
 https://github.com/foundry-rs/starknet-foundry/[The Starknet Foundry Github repo]
 
+[#hardhat]
 == Hardhat (with a plugin)
 
 [discrete]
@@ -256,6 +264,7 @@ Upcoming features include:
 
 * See examples of how to use the plugin at the link:https://github.com/0xSpaceShard/starknet-hardhat-example/tree/master[Starknet Hardhat example scripts Github repo].
 
+[#starknet_remix_plugin]
 == The Starknet Remix plugin
 
 [discrete]
@@ -296,6 +305,7 @@ Get started with Remix at the link:https://remix-project.org[Remix Project site]
 
 Get started with the Starknet Remix plugin at link:https://github.com/groksmith/starkware-remix-plugin[the Starknet Remix plugin’s Github repo].
 
+[#vs_code_cairo_extension]
 == The Visual Studio Code Cairo extension
 
 [discrete]
