@@ -7,8 +7,16 @@ The following tools are recommended to begin developing on Starknet:
 
 [horizontal,labelwidth="25"]
 https://github.com/xJonathanLEI/starkli[Starkli]:: A command-line interface that allows you to interact with Starknet.
++
+* Official documentation: link:https://book.starkli.rs/[book.starkli.rs]
+* Code Repository:
+link:https://github.com/xJonathanLEI/starkli[github.com/xJonathanLEI/starkli]
 
 https://github.com/software-mansion/scarb[Scarb]:: A package manager for Cairo. Among other features, it enables you to compile Cairo code to Sierra, the intermediate language between high-level Cairo and the low-level Cairo Assembly (CASM).
++
+* Official documentation: link:https://docs.swmansion.com/scarb/[docs.swmansion.com/scarb]
+* Code Repository:
+link:https://github.com/software-mansion/scarb[github.com/software-mansion/scarb]
 
 [#installing_starkli]
 == Installing Starkli
