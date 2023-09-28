@@ -5,8 +5,6 @@ In order to interact with Starknet and compile Cairo code, you need to install s
 
 The following tools are recommended to begin developing on Starknet:
 
-
-
 [cols="1,1,1,1"]
 [%autowidth.stretch]
 |===
