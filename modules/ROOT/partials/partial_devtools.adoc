@@ -1,5 +1,5 @@
 [id="starknet_development_tools"]
-= Starknet development tools
+= Starknet developer tools
 
 While Starknet is a blockchain, it is different from blockchains built on the model of the Ethereum virtual machine (EVM), and so it requires many of its own developer tools. The tools discussed here are being developed in coordination with StarkWare, and in some cases have received grants from StarkWare or the Starknet Foundation in order to make the development process as friendly as possible, with improvements happening all the time.
 
