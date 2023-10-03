@@ -272,7 +272,7 @@ For more information on the Starknet Remix plugin, see link:https://medium.com/n
 
 Get started with Remix at the link:https://remix-project.org[Remix Project site].
 
-Get started with the Starknet Remix plugin at link:https://github.com/groksmith/starkware-remix-plugin[the Starknet Remix plugin’s Github repo].
+Get started with the Starknet Remix plugin at link:https://github.com/NethermindEth/starknet-remix-plugin[the Starknet Remix plugin’s Github repo].
 
 [#vs_code_cairo_extension]
 == The Visual Studio Code Cairo extension
