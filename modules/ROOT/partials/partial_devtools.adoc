@@ -5,33 +5,36 @@ While Starknet is a blockchain, it is different from blockchains built on the mo
 
 While originally the stack of Starknet development tools was based mostly on Python, tool developers are moving towards building with Rust.
 
-See the table xref:#tools_per_stage_of_development[] below to understand where each tool fits in the development process.
-
-[#tools_per_stage_of_development]
-.Tools for each stage of development
-|===
-| *Coding in Cairo* | xref:#vs_code_cairo_extension[_VsCode_ + _Cairo plugin_] +
-or +
-xref:#starknet_remix_plugin[_Remix_ + _Cairo plugin_]
-| *Building* | xref:#scarb[_Scarb_]
-| *Testing and debugging* | xref:#starknet_foundry[_Foundry (Forge)_] +
-or +
-xref:#hardhat[_Hardhat_ + _Starknet plugin (JavaScript only)_]
-| *Running on a devnet* |_Scarb_ for compiling and packaging +
-xref:#starknet-devnet[_starknet-devnet_/_starknet-devnet-rs_ (local node)] +
-or +
-xref:#katana[_Katana_ (local node)]
-| *Contract development* | xref:#starknet_foundry[_Foundry (Cast)_]
-or
-xref:#starkli[_Starkli_]
-| *Package delivery* +
-(Optional) | _Scarb_
-|===
+See xref:#tools_per_stage_of_development[] below to understand where each tool fits in the development process.
 
 [NOTE]
 ====
 The tools listed here do not represent all that are available.
 ====
+
+[#tools_per_stage_of_development]
+.Tools for each stage of development
+image::tools_workflow.jpg[]
+
+// .Tools for each stage of development
+// |===
+// | *Coding in Cairo* | xref:#vs_code_cairo_extension[_VsCode_ + _Cairo plugin_] +
+// or +
+// xref:#starknet_remix_plugin[_Remix_ + _Cairo plugin_]
+// | *Building* | xref:#scarb[_Scarb_]
+// | *Testing and debugging* | xref:#starknet_foundry[_Foundry (Forge)_] +
+// or +
+// xref:#hardhat[_Hardhat_ + _Starknet plugin (JavaScript only)_]
+// | *Running on a devnet* |_Scarb_ for compiling and packaging +
+// xref:#starknet-devnet[_starknet-devnet_/_starknet-devnet-rs_ (local node)] +
+// or +
+// xref:#katana[_Katana_ (local node)]
+// | *Contract development* | xref:#starknet_foundry[_Foundry (Cast)_]
+// or
+// xref:#starkli[_Starkli_]
+// | *Package delivery* +
+// (Optional) | _Scarb_
+// |===
 
 [#starkli]
 == Starkli
