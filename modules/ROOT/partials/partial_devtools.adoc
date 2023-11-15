@@ -14,7 +14,7 @@ The tools listed here do not represent all that are available.
 
 [#tools_per_stage_of_development]
 .Tools for each stage of development
-image::tools_workflow.jpg[]
+image::1.0.0@docs-common-content:ROOT:image$tools_workflow.jpg[]
 
 // .Tools for each stage of development
 // |===
