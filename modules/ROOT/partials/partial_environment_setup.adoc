@@ -1,9 +1,7 @@
 [id="setup"]
 = Setting up your environment
 
-In order to interact with Starknet and compile Cairo code, you need to install several tools.
-
-The following tools are recommended to begin developing on Starknet:
+In order to begin developing on Starknet, you must be able to interact with Starknet and compile Cairo code. You can use the following tools:
 
 [cols="1,1,1,1"]
 [%autowidth.stretch]
