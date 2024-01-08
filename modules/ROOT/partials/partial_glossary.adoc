@@ -19,10 +19,6 @@ Ordered sets of Starknet transactions that are run using the Starknet OS, result
 
 A node in the Starknet network that is used only for querying the current Starknet state. It can independently (i.e., without/o querying additional nodes) answer queries about the current state of the Starknet network, including the L1 state. It does not batch transactions or prove batches.
 
-[#toc-prover]
-== prover
-
-A separate process (either an online service or internal to the node) that receives the output of Cairo programs and generates STARK proofs to be verified. The Prover submits the STARK proof to the verifier that registers the fact on L1.
 
 [#toc-starknet-application]
 == Starknet application
@@ -68,3 +64,23 @@ An invocation of a specific state-transition logic that’s defined by a contrac
 == Starknet users
 
 The users that interact with Starknet sequencer nodes and, if necessary, with L1 contracts. These users, whether human or automated, are the agents that submit transactions to the Starknet network.
+
+[#toc-starknet-Prover]
+== Starknet Prover
+
+Provers serve as the second line of verification in the Starknet network. Their main task is to validate the work of the Sequencers (when they receive the block produced by the Sequencer) and to generate proofs that these processes were correctly performed.
+
+[#toc-starknet-Sequencer]
+== Starknet Sequencer
+
+Sequencers are the backbone of the Starknet network, akin to Ethereum’s validators. They usher transactions into the system.For networks like Starknet and other platforms utilizing Validity rollups, a similar parallel is drawn. These networks outsource transaction processing to specialized entities and then verify their work. These specialized entities in the context of Validity rollups are known as "Sequencers."
+
+[#toc-starknet-Verifier]
+== Starknet Verifier
+
+A Solidity verifier is an L1 smart contract, crafted in Solidity, designed to validate STARK proofs from SHARP (Shared Prover).
+
+[#toc-starknet- node]
+== Starknet node
+
+A node in the Starknet ecosystem is a computer equipped with Starknet software, contributing significantly to the network's operations. Nodes are vital for the Starknet ecosystem's functionality, security, and overall health. Without nodes, the Starknet network would not be able to function effectively.
