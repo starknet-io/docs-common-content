@@ -108,3 +108,25 @@ An invocation of a specific state-transition logic that’s defined by a contrac
 == Starknet users
 
 The users that interact with Starknet sequencer nodes and, if necessary, with L1 contracts. These users, whether human or automated, are the agents that submit transactions to the Starknet network.
+
+[#toc-starknet-Prover]
+== Prover
+
+Provers serve as the second line of verification in the Starknet network. Their main task is to validate the work of the sequencers when they receive the block produced by the sequencer, and to generate proofs that these processes were correctly performed.
+SHARP, which stands for "Shared Prover", is a mechanism used in Starknet that aggregates multiple Cairo programs from different users, each containing different logic. These Cairo programs are then executed together, generating a single proof common to all the programs.
+
+[#toc-starknet-sequencer]
+== sequencer
+
+Sequencers are the backbone of the Starknet network, akin to Ethereum’s validators. They usher transactions into the system. For networks like Starknet and other platforms utilizing Validity rollups, a similar parallel is drawn. These networks outsource transaction processing to specialized entities and then verify their work. These specialized entities in the context of Validity rollups are known as _sequencers_.
+
+[#toc-starknet-Verifier]
+== Starknet Verifier
+
+A Solidity verifier is an L1 smart contract, crafted in Solidity, designed to validate STARK proofs from SHARP (Shared Prover).
+
+[#toc-starknet- node]
+== Starknet node
+
+A computer, equipped with Starknet software, that contributes significantly to the network's operations. Nodes are vital for the Starknet ecosystem's functionality, security, and overall health. Without nodes, the Starknet network would not be able to function effectively.
+Nodes serve as auditors of the network, maintaining the state of the network, such as how much Bitcoin each participant owns or the current state of a specific smart contract. They accomplish this by processing transactions and preserving a record of all transactions.
