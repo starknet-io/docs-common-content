@@ -1,10 +1,20 @@
 [id="glossary"]
 = Glossary
 
+[#toc-api]
+== API 
+
+Application Programming Interface, Is a software intermediary that allows two or more computers to communicate with each other. An API describes how to build or use such a connection or interface. 
+
 [#toc-application-developers]
 == application developer
 
 Someone that develops a Starknet application. They write and deploy contracts on Starknet and Ethereum.
+
+[#toc-array]
+== array
+
+A collection of elements of the same type. Arrays in Cairo are immutable and cannot be overwritten, you may only append items to the end of an array.
 
 [#toc-blocks-previously-known-as-batches]
 == blocks (previously known as batches)
@@ -14,15 +24,45 @@ Ordered sets of Starknet transactions that are run using the Starknet OS, result
 * a block hash – a unique stable identifier that can be used to query and refer to the block.
 * a block number – an ordinal number representing the location of the block in the sequence of accepted blocks in Starknet. Note, a block’s number may change over time. Also, a given number may refer to different blocks at different points in time, e.g., in the event of L1 chain re-orders.
 
+[#toc-components]
+== components
+
+A module that can be added to a Starknet smart contract to provide storage, events, and functions. You can plug them into your smart contract whether they were written by you or someone else.  
+
+[#toc-dictionaries]
+== dictionaries
+
+A data structure in Cairo that holds a collection of key-value pairs where each key is unique and has a corresponding value. Similar to maps, hash tables, and associative arrays in other programming languages. 
+
 [#toc-full-state-node]
 == full state node
 
 A node in the Starknet network that is used only for querying the current Starknet state. It can independently (i.e., without/o querying additional nodes) answer queries about the current state of the Starknet network, including the L1 state. It does not batch transactions or prove batches.
 
+[#toc-import]
+== import
+
+Allows developers to reuse functions, structs, enums, in a Cairo program from an external module.
+
+[#toc-multi-call]
+== multi-call
+
+A call where multiple transactions can be bundled together and signed once on Starknet.
+
 [#toc-prover]
 == prover
 
 A separate process (either an online service or internal to the node) that receives the output of Cairo programs and generates STARK proofs to be verified. The Prover submits the STARK proof to the verifier that registers the fact on L1.
+
+[#toc-rpc]
+== RPC
+
+Remote Procedure Call, a software communication protocol that allows a program to request a service from another program located on a computer in a network without having to understand the network's details. RPC uses the Client/Server model where the requesting program is a client and the service providing program is the server. In Starknet, RPC provides clients access to the Starknet Network.
+
+[#toc-signer]
+== signer
+
+The component of a Starknet account that authorizes a transaction and is decoupled from the account. It is a keypair consisting of a private and public key.    
 
 [#toc-starknet-application]
 == Starknet application
@@ -143,3 +183,25 @@ Multi-call executes multiple calls as a single transaction. If one call fails, t
 == Import
 
 In Cairo, as is the case with other programming languages, it’s undesirable and impractical to keep an entire program in one source file. To avoid this, and to facilitate modularity, Cairo allows importing a module from another file.
+
+[#toc-starknet-Prover]
+== Prover
+
+Provers serve as the second line of verification in the Starknet network. Their main task is to validate the work of the sequencers when they receive the block produced by the sequencer, and to generate proofs that these processes were correctly performed.
+SHARP, which stands for "Shared Prover", is a mechanism used in Starknet that aggregates multiple Cairo programs from different users, each containing different logic. These Cairo programs are then executed together, generating a single proof common to all the programs.
+
+[#toc-starknet-sequencer]
+== sequencer
+
+Sequencers are the backbone of the Starknet network, akin to Ethereum’s validators. They usher transactions into the system. For networks like Starknet and other platforms utilizing Validity rollups, a similar parallel is drawn. These networks outsource transaction processing to specialized entities and then verify their work. These specialized entities in the context of Validity rollups are known as _sequencers_.
+
+[#toc-starknet-Verifier]
+== Starknet Verifier
+
+A Solidity verifier is an L1 smart contract, crafted in Solidity, designed to validate STARK proofs from SHARP (Shared Prover).
+
+[#toc-starknet- node]
+== Starknet node
+
+A computer, equipped with Starknet software, that contributes significantly to the network's operations. Nodes are vital for the Starknet ecosystem's functionality, security, and overall health. Without nodes, the Starknet network would not be able to function effectively.
+Nodes serve as auditors of the network, maintaining the state of the network, such as how much Bitcoin each participant owns or the current state of a specific smart contract. They accomplish this by processing transactions and preserving a record of all transactions.
