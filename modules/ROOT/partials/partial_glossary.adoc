@@ -109,6 +109,81 @@ An invocation of a specific state-transition logic that’s defined by a contrac
 
 The users that interact with Starknet sequencer nodes and, if necessary, with L1 contracts. These users, whether human or automated, are the agents that submit transactions to the Starknet network.
 
+[#toc-blob]
+== Blob
+
+In the Cairo programming language, a "blob" refers to an undifferentiated and unstructured block of binary data. It represents a sequence of raw bytes without a predefined data type or format, commonly used for handling arbitrary and generic data in a flexible manner.
+
+[#toc-builtins]
+== Builtins
+
+Builtins are predefined optimised low-level execution units which are added to the Cairo CPU board to perform predefined computations which are expensive to perform in vanilla Cairo (e.g., range-checks, Pedersen hash, ECDSA, …).
+
+[#toc-cairo-step]
+== Cairo step
+
+Cairo step refers to a fundamental computational operation or instruction. It represents an elementary unit of execution within the Cairo language, typically involving mathematical, logical, or control-flow operations that collectively define the behaviour of a program.
+
+[#toc-sierra]
+== SIERRA
+
+SIERRA is an intermediate representation introduced in Starknet development, replacing Cairo assembly with instructions in a new form called Sierra. This transition aims to ensure transaction provability while addressing issues related to reverted transactions and potential denial-of-service attacks. Sierra serves as a secure layer between user code (Cairo 1.0) and provable code (Casm), contributing to the overall security and integrity of the Starknet system.
+
+[#toc-cairovm]
+== Cairo VM
+
+The Cairo Virtual Machine (VM) is software that knows how to take the byte-code produced by the compiler, and run it on a computer. The result of this execution is the program trace which can then be sent to a STARK prover in order to prove the validity of the instruction expressed in the Cairo code.
+
+[#toc-stark]
+== STARK
+
+STARK is a proof system. It uses cutting-edge cryptography to provide polylogarithmic verification resources and proof size, with minimal and post-quantum-secure assumptions.
+
+[#toc-starknet-statediff]
+== State diff
+
+The state diffs contain information on every contract whose storage was updated and additional information on contract deployments.
+
+[#toc-account-abstraction]
+== Account abstraction
+
+Account abstraction enables more flexible account management. Rather than the protocol determining an account’s behaviour, an account contract, which is a smart contract with programmable logic, defines a user’s account.
+
+[#toc-rpc]
+== RPC
+
+The RPC or remote procedure call is the modus operandi when performing network interactions, in turn allowing you to execute subroutines or procedures as they are also known, with little worry about putting the details of your remote interactions explicitly in code.
+
+[#toc-api]
+== API
+
+The Provider API allows you to interact with the Starknet network, without signing transactions or messages.
+
+[#toc-starknet-component]
+== Component
+
+A component closely resembles a contract and encompasses storage variables, events, as well as external and internal functions. Unlike a standalone contract, a component cannot be deployed independently; instead, its code becomes integrated into the contract to which it is attached.
+
+[#toc-starknet-array]
+== Array
+
+An array is a collection of elements of the same type. You can create and use array methods by using the ArrayTrait trait from the core library.
+
+[#toc-starknet-signer]
+== Signer
+
+The Signer is a smart contract with a private key for signing transactions, while the Account Descriptor is a JSON file detailing the wallet’s address and public key.
+
+[#toc-multicall]
+== Multicall
+
+Multi-call executes multiple calls as a single transaction. If one call fails, the entire operation is aborted. Use it to prevent leaving your system in an inconsistent state.
+
+[#toc-import]
+== Import
+
+In Cairo, as is the case with other programming languages, it’s undesirable and impractical to keep an entire program in one source file. To avoid this, and to facilitate modularity, Cairo allows importing a module from another file.
+
 [#toc-starknet-Prover]
 == Prover
 
