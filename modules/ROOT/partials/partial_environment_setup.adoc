@@ -68,8 +68,8 @@ Setting environment variables for Starkli significantly simplifies command execu
 The two primary environment variables that are vital for effective usage of Starkli's CLI are:
 
 [horizontal,labelwidth="25"]
-`STARKNET_ACCOUNT`:: The location of the keystore file for the xref:set_up_an_account.adoc#creating_a_signer[Signer].
-`STARKNET_KEYSTORE`:: The location of the xref:set_up_an_account.adoc#creating_an_account_descriptor[Account Descriptor] file.
+`STARKNET_ACCOUNT`:: The location of the xref:set_up_an_account.adoc#creating_an_account_descriptor[Account Descriptor] file.
+`STARKNET_KEYSTORE`:: The location of the keystore file for the xref:set_up_an_account.adoc#creating_a_signer[Signer].
 
 Set these environment variables as follows:
 
