@@ -95,7 +95,7 @@ There are several SDKs for various languages, so you can choose the SDK accordin
 
 |Starknet.js a|
 JavaScript, TypeScript
-|Dapps, Wallets |Shardlabs | link:https://github.com/0xs34n/starknet.js[starknet.js Github repository]
+|Dapps, Wallets |SpaceShard | link:https://github.com/0xs34n/starknet.js[starknet.js Github repository]
 |Starknet.py |Python |Useful scripts |Software Mansion (SWM) | link:https://github.com/software-mansion/starknet.py[starknet.py Github repository]
 |Starknet-rs |Rust |Starkli, Foundry |Jonathan Lei | link:https://github.com/xJonathanLEI/starknet-rs[starknet-rs Github repository]
 |Starknet-go |Go |Chainlink |Nethermind | link:https://github.com/NethermindEth/starknet.go[starknet-go Github repository]
@@ -109,14 +109,14 @@ JavaScript, TypeScript
 
 A devnet is a Starknet instance that you run as a local node, which enables much quicker development than is possible using testnet, as well as providing privacy prior to launching on testnet.
 
-Shardlabs originally wrote starknet-devnet in Python, but they are now actively developing a version in Rust, starknet-devnet-rs. For now, the Python-based version is more feature-rich, with the most notable feature being the ability to fork the network at a given block, so if that’s important to you, then you need to use the Python-based version. However, starknet-devnet-rs runs more quickly, and the developers are working to bring it to feature parity with the Python-based starknet-devnet.
+SpaceShard originally wrote starknet-devnet in Python, but they are now actively developing a version in Rust, starknet-devnet-rs. For now, the Python-based version is more feature-rich, with the most notable feature being the ability to fork the network at a given block, so if that’s important to you, then you need to use the Python-based version. However, starknet-devnet-rs runs more quickly, and the developers are working to bring it to feature parity with the Python-based starknet-devnet.
 
 starknet-devnet-rs is the only version that is receiving new features.
 
 [discrete]
 === Who maintains it?
 
-Shardlabs
+SpaceShard
 
 [discrete]
 === Why should you care?
@@ -224,7 +224,7 @@ A tool primarily for testing Cairo code. You can also deploy contracts using scr
 [discrete]
 === Who maintains it?
 
-Shardlabs
+SpaceShard
 
 [discrete]
 === Why should you care?
