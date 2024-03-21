@@ -1,70 +1,187 @@
 [id="glossary"]
 = Glossary
+:Cairo_header: pass:quotes[_Cairo programming language term_]
 
-[#toc-application-developers]
-== application developer
+[#account-abstraction]
+== account abstraction
 
-Someone that develops a Starknet application. They write and deploy contracts on Starknet and Ethereum.
+Refers to the capability of users to define their own account logic instead of it being dictated by the protocol.
 
-[#toc-blocks-previously-known-as-batches]
+[#account_contract]
+== account contract
+
+An L2 smart contract, implemented in Cairo, with programmable logic that implements a user account on Starknet. An account contract implements special methods that enable initiating transactions.
+
+.See also
+
+* xref:#account-abstraction[account abstraction]
+
+[#api]
+== API
+
+The Starknet Node API uses the Remote Procedure Call (RPC) architectural style, written in JSON format. For complete information on the Starknet Node API in JSON RPC format, see link:https://github.com/starkware-libs/starknet-specs/blob/master/api/starknet_api_openrpc.json[`starknet_api_openrpc.json`] on Github.
+
+.See also
+
+* xref:#rpc[RPC]
+
+[#blocks-previously-known-as-batches]
 == blocks (previously known as batches)
 
-Ordered sets of Starknet transactions that are run using the Starknet OS, resulting in one aggregated state change that is then committed to the Starknet L1 core contract. A block has:
+Ordered sets of Starknet transactions that are run using the Starknet OS, resulting in one aggregated state change that is then committed to the Starknet L1 Core Contract.
 
-* a block hash – a unique stable identifier that can be used to query and refer to the block.
-* a block number – an ordinal number representing the location of the block in the sequence of accepted blocks in Starknet. Note, a block’s number may change over time. Also, a given number may refer to different blocks at different points in time, e.g., in the event of L1 chain re-orders.
+A block has the following identifiers:
 
-[#toc-full-state-node]
-== full state node
+[horizontal,labelwidth="20"]
+block hash:: A unique stable identifier that can be used to query and refer to the block.
+block number:: A number representing the location of the block in the sequence of accepted blocks in Starknet.
 
-A node in the Starknet network that is used only for querying the current Starknet state. It can independently (i.e., without/o querying additional nodes) answer queries about the current state of the Starknet network, including the L1 state. It does not batch transactions or prove batches.
+[#builtin]
+== builtin
 
-[#toc-prover]
+{Cairo_header}
+
+A predefined optimized low-level execution unit that is added to the Cairo CPU board to perform predefined computations that are expensive to perform in vanilla Cairo, including range-checks, Pedersen hash calculations, and ECDSA.
+
+[#cairo-step]
+== Cairo step
+
+A fundamental computational operation or instruction in the Cairo language. The smallest unit of execution within the Cairo VM, typically involving mathematical, logical, or control-flow operations that collectively define the behavior of a program.
+
+[#cairovm]
+== Cairo VM
+
+The Cairo Virtual Machine (VM) is software that knows how to execute compiled Cairo byte-code. The result of this execution is the program trace that can then be sent to a STARK prover in order to prove the validity of the instruction expressed in the Cairo code.
+
+[#contract_class]
+== contract class
+
+The definition of a contract. It includes Cairo byte code, hint information, entry point names, and everything that defines its semantics.
+
+[#contract instance]
+== contract instance
+
+A deployed contract that corresponds to a class. Only contract instances act as true contracts, in that they have their own storage and can be called by transactions or other contracts.
+
+[#fri]
+== fri
+
+The smallest denomination of STRK. 1 fri = 10^-18^ STRK.
+
+[#full-node]
+== full node
+
+A node in the Starknet network that is used only for querying the current Starknet state. It can independently, without querying additional nodes, answer queries about the current state of the Starknet network, including the L1 state. A full state node does not batch transactions or prove batches.
+
+[#multicall]
+== multicall
+
+A single transaction that executes multiple bundled transactions, which are signed once on Starknet. If one call fails, the entire operation is aborted.
+
+[#prover]
 == prover
 
-A separate process (either an online service or internal to the node) that receives the output of Cairo programs and generates STARK proofs to be verified. The Prover submits the STARK proof to the verifier that registers the fact on L1.
+An entity that receives the output of Cairo programs and generates proofs to be verified. The prover submits the proof to the verifier that registers the fact on L1. Their main task is to validate the work of athe sequencers when they receive the block produced by the sequencer, and to generate proofs that these processes were correctly performed.
 
-[#toc-starknet-application]
-== Starknet application
+.See also
 
-A collection of contracts (L1 and L2) that collectively implement a business flow.
+* xref:#SHARP[SHARP]
+* xref:#verifier[verifier]
 
-[#toc-starknet-contract]
-== Starknet contract
+[#rpc]
+== RPC
 
-The program that encodes the implemented application business logic. This includes the application data structures and handling of specific transactions sent by users. Specifically, the Starknet contract encodes valid state transitions for the application.
+The Starknet RPC API provides clients an interface to retrieve information on the state of the chain and to interact with it, such as by posting transactions or estimating the fee of a transaction before it is sent.
 
-* Starknet account contracts: Given account abstraction, user accounts are not implemented at the protocol level. Some contracts will, therefore, need to implement the concept of user accounts; these are called Account Contracts. The exact implementation depends on the contract; but, technically, these are Starknet contracts that are implemented in Cairo.
+.See also
 
-[#toc-starknet-l1-core-contract]
-== Starknet L1 core contract
+* xref:#api[API]
 
-This L1 contract defines the state of the system by storing the commitment to the L2 state. The contract also stores the Starknet OS program hash – effectively defining the version of Starknet the network is running. The committed state on the L1 core contract acts as the consensus mechanism of Starknet, i.e., the system is secured by the L1 Ethereum consensus. In addition to maintaining the state, the Starknet L1 Core Contract is the main hub of operations for Starknet on L1. Specifically:
+[#sequencer]
+== sequencer
 
-* It stores the list of allowed verifiers (contracts) that can verify state update transactions
-* It facilitates L1 ↔ L2 interaction
+A set of services which together receive transactions from the network, put them in order, check their validity, and build blocks.
 
-[#toc-starknet-os]
+[#SHARP]
+== SHARP
+
+The Shared Prover (SHARP), is a mechanism used in Starknet that aggregates multiple Cairo programs from different users, each containing different logic. These Cairo programs are then executed together, generating a single proof common to all the programs.
+
+
+[#sierra]
+== Sierra
+
+An intermediate representation between Cairo and Casm. Sierra code is then compiled to a Casm program with the property that, for any input, the execution of the program is provable. In particular, it ensures that the execution of a transaction is provable regardless of whether the execution succeeded or was reverted due to an error.
+
+.Additional resources
+
+* link:https://docs.starknet.io/documentation/architecture_and_concepts/Smart_Contracts/cairo-and-sierra/[Cairo and Sierra]
+
+[#signer]
+== signer
+
+The component of a Starknet account that authorizes a transaction and is decoupled from the account. It is a keypair consisting of a private and public key.
+
+A smart contract with a private key for signing transactions.
+
+.See also
+
+xref:#account_descriptor[account descriptor]
+
+[#stark]
+== STARK
+
+A proof system that uses cryptography to provide polylogarithmic verification resources and proof size, with minimal and post-quantum-secure assumptions.
+
+[#starknet-l1-core-contract]
+== Starknet L1 Core Contract
+
+A smart contract deployed on Ethereum. It's address is link:https://etherscan.io/address/0xc662c410c0ecf747543f5ba90660f6abebd9c8c4[`0xc662c410c0ecf747543f5ba90660f6abebd9c8c4`]. It defines the state of Starknet
+ by storing:
+
+* The commitment to the L2 state.
+* The Starknet OS program hash – effectively defining the version of Starknet the network is running.
+
+The committed state on the L1 Core Contract acts as the consensus mechanism of Starknet,that is, the system is secured by the L1 Ethereum consensus. In addition to maintaining the state, the Starknet L1 Core Contract is the main hub of operations for Starknet on L1. Specifically:
+
+* It stores the list of allowed verifier contracts that can verify state update transactions
+* It deals with cross-layer interaction between L1 and L2.
+
+[#starknet-os]
 == Starknet OS
 
-Updates the L2 state of the system based on transactions that are received as inputs. Effectively facilitates the execution of the (Cairo-based) Starknet contracts. The OS is Cairo-based and is essentially the program whose output is proven and verified using the STARK-proof system. Specific system operations and functionality available for Starknet contracts are available as calls made to the OS.
+The Cairo program that, upon receiving a set of transaction as input, executes the state transition. For more information, see link:https://docs.starknet.io/documentation/architecture_and_concepts/Network_Architecture/starknet-state/[Starknet state]. The integrity of this computation is what is actually proven and verified.
 
-[#toc-starknet-sequencer-node]
-== Starknet sequencer node
 
-The main node of the Starknet network. It implements the core functionality of sequencing transactions submitted to it. It executes the Starknet OS Cairo program with the relevant inputs, proves the result using the Proving Service or some internal STARK prover, and eventually updates the network state on the Starknet Core Contract.
-
-[#toc-starknet-state]
+[#starknet-state]
 == Starknet state
 
-The state is composed of contracts’ code and contracts’ storage.
+The set of all the contracts' code and all the memory slots and their values, in every contract's storage.
 
-[#toc-starknet-transaction]
-== Starknet transaction
+.See also
 
-An invocation of a specific state-transition logic that’s defined by a contract. Syntactically, a transaction has a well-defined structure that includes all the necessary metadata and an arbitrary data payload. The semantics of the transaction is defined by the invoked contract.
+* link:https://docs.starknet.io/documentation/architecture_and_concepts/Network_Architecture/starknet-state/[Starknet state]
 
-[#toc-starknet-users]
-== Starknet users
+[#transaction]
+== transaction
 
-The users that interact with Starknet sequencer nodes and, if necessary, with L1 contracts. These users, whether human or automated, are the agents that submit transactions to the Starknet network.
+A transaction can be seen as a message containing a set of instructions that describe a state transition. The Starknet protocol has the following types of transactions, which affect different parts of the state:
+
+* `DECLARE`
+* `INVOKE`
+* `DEPLOY_ACCOUNT`
+
+.See also
+
+* link:https://docs.starknet.io/documentation/architecture_and_concepts/Network_Architecture/transactions/[Transaction types]
+* link:https://docs.starknet.io/documentation/architecture_and_concepts/Network_Architecture/starknet-state/[Starknet state]
+
+[#statediff]
+== state diff
+
+The data describing the difference between two states. It contains information on every contract whose storage was updated and additional information on contract deployments.
+
+[#verifier]
+== verifier
+
+A set of L1 smart contracts whose purpose is to verify STARK proofs submitted by the Shared Prover (SHARP)
