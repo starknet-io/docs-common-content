@@ -79,7 +79,7 @@ A single transaction that executes multiple bundled transactions, which are sign
 [#prover]
 == prover
 
-An entity that receives the output of Cairo programs and generates proofs to be verified. The prover submits the proof to the verifier that registers the fact on L1. The prover generates proofs of computational integrity of the work performed by the sequencer.
+The entity that receives the output of Cairo programs and generates proofs to be verified. In the context of Starknet, the prover generates proofs of the computational integrity of the work performed by the sequencer. It then submits the proof to the verifier on L1, which registers the fact.
 
 .See also
 
