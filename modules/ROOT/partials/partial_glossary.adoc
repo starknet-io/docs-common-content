@@ -10,7 +10,7 @@ Refers to the capability of users to define their own account logic instead of i
 [#account_contract]
 == account contract
 
-An L2 smart contract, implemented in Cairo, with programmable logic that implements a user account on Starknet. An account contract implements special methods that enable initiating transactions.
+An L2 smart contract, with programmable logic that implements a user account on Starknet. An account contract implements special methods that enable initiating transactions.
 
 .See also
 
@@ -25,28 +25,26 @@ The Starknet Node API uses the Remote Procedure Call (RPC) architectural style, 
 
 * xref:#rpc[RPC]
 
-[#blocks-previously-known-as-batches]
-== blocks (previously known as batches)
+[#block]
+== block
 
-Ordered sets of Starknet transactions that are run using the Starknet OS, resulting in one aggregated state change that is then committed to the Starknet L1 Core Contract.
+An ordered set of Starknet transactions. Blocks are built by the sequencer.
 
 A block has the following identifiers:
 
 [horizontal,labelwidth="20"]
-block hash:: A unique stable identifier that can be used to query and refer to the block.
+block hash:: A unique identifier that can be used to query and refer to the block.
 block number:: A number representing the location of the block in the sequence of accepted blocks in Starknet.
 
 [#builtin]
 == builtin
 
-{Cairo_header}
-
-A predefined optimized low-level execution unit that is added to the Cairo CPU board to perform predefined computations that are expensive to perform in vanilla Cairo, including range-checks, Pedersen hash calculations, and ECDSA.
+An optimized low-level execution unit that is added to the Cairo CPU board to perform predefined computations that are expensive to perform in standard Cairo, including range-checks, Pedersen hash calculations, and ECDSA.
 
 [#cairo-step]
 == Cairo step
 
-A fundamental computational operation or instruction in the Cairo language. The smallest unit of execution within the Cairo VM, typically involving mathematical, logical, or control-flow operations that collectively define the behavior of a program.
+The smallest unit of execution within the Cairo VM, typically involving mathematical, logical, or control-flow operations that collectively define the behavior of a program.
 
 [#cairovm]
 == Cairo VM
@@ -56,9 +54,9 @@ The Cairo Virtual Machine (VM) is software that knows how to execute compiled Ca
 [#contract_class]
 == contract class
 
-The definition of a contract. It includes Cairo byte code, hint information, entry point names, and everything that defines its semantics.
+The definition of a contract. It includes Cairo byte code, entry point names, and everything that defines its semantics.
 
-[#contract instance]
+[#contract_instance]
 == contract instance
 
 A deployed contract that corresponds to a class. Only contract instances act as true contracts, in that they have their own storage and can be called by transactions or other contracts.
@@ -71,7 +69,7 @@ The smallest denomination of STRK. 1 fri = 10^-18^ STRK.
 [#full-node]
 == full node
 
-A node in the Starknet network that is used only for querying the current Starknet state. It can independently, without querying additional nodes, answer queries about the current state of the Starknet network, including the L1 state. A full state node does not batch transactions or prove batches.
+A machine that runs the Starknet execution protocol. A full node stays synchronized with the latest state of the network, stores past blocks and transactions, and enables users to interact with the network, such as by querying its state or by broadcasting new transactions.
 
 [#multicall]
 == multicall
@@ -81,7 +79,7 @@ A single transaction that executes multiple bundled transactions, which are sign
 [#prover]
 == prover
 
-An entity that receives the output of Cairo programs and generates proofs to be verified. The prover submits the proof to the verifier that registers the fact on L1. Their main task is to validate the work of athe sequencers when they receive the block produced by the sequencer, and to generate proofs that these processes were correctly performed.
+The entity that receives the output of Cairo programs and generates proofs to be verified. In the context of Starknet, the prover generates proofs of the computational integrity of the work performed by the sequencer. It then submits the proof to the verifier on L1, which registers the fact.
 
 .See also
 
@@ -117,17 +115,6 @@ An intermediate representation between Cairo and Casm. Sierra code is then compi
 
 * link:https://docs.starknet.io/documentation/architecture_and_concepts/Smart_Contracts/cairo-and-sierra/[Cairo and Sierra]
 
-[#signer]
-== signer
-
-The component of a Starknet account that authorizes a transaction and is decoupled from the account. It is a keypair consisting of a private and public key.
-
-A smart contract with a private key for signing transactions.
-
-.See also
-
-xref:#account_descriptor[account descriptor]
-
 [#stark]
 == STARK
 
@@ -136,7 +123,7 @@ A proof system that uses cryptography to provide polylogarithmic verification re
 [#starknet-l1-core-contract]
 == Starknet L1 Core Contract
 
-A smart contract deployed on Ethereum. It's address is link:https://etherscan.io/address/0xc662c410c0ecf747543f5ba90660f6abebd9c8c4[`0xc662c410c0ecf747543f5ba90660f6abebd9c8c4`]. It defines the state of Starknet
+A smart contract deployed on Ethereum. Its address is link:https://etherscan.io/address/0xc662c410c0ecf747543f5ba90660f6abebd9c8c4[`0xc662c410c0ecf747543f5ba90660f6abebd9c8c4`]. It defines the state of Starknet
  by storing:
 
 * The commitment to the L2 state.
