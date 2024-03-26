@@ -39,7 +39,7 @@ block number:: A number representing the location of the block in the sequence o
 [#builtin]
 == builtin
 
-A optimized low-level execution unit that is added to the Cairo CPU board to perform predefined computations that are expensive to perform in standard Cairo, including range-checks, Pedersen hash calculations, and ECDSA.
+An optimized low-level execution unit that is added to the Cairo CPU board to perform predefined computations that are expensive to perform in standard Cairo, including range-checks, Pedersen hash calculations, and ECDSA.
 
 [#cairo-step]
 == Cairo step
