@@ -171,4 +171,4 @@ The data describing the difference between two states. It contains information o
 [#verifier]
 == verifier
 
-A set of L1 smart contracts whose purpose is to verify STARK proofs submitted by the Shared Prover (SHARP)
+A set of L1 smart contracts whose purpose is to verify STARK proofs submitted by the Shared Prover (SHARP).
