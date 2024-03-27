@@ -98,7 +98,7 @@ The Starknet RPC API provides clients an interface to retrieve information on th
 [#sequencer]
 == sequencer
 
-A set of services which together receive transactions from the network, put them in order, check their validity, and build blocks.
+A set of services that together receive transactions from the network, put them in order, check their validity, and build blocks.
 
 [#SHARP]
 == SHARP
