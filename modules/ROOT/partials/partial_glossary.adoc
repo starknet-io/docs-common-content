@@ -10,7 +10,7 @@ Refers to the capability of users to define their own account logic instead of i
 [#account_contract]
 == account contract
 
-An L2 smart contract, with programmable logic that implements a user account on Starknet. An account contract implements special methods that enable initiating transactions.
+An L2 smart contract, with programmable logic, that implements a user account on Starknet. An account contract implements special methods that enable initiating transactions.
 
 .See also
 
